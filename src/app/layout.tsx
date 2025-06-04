@@ -5,9 +5,11 @@ import "./globals.css";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: "400",
   display: "swap", // ⬅️ Isso melhora a compatibilidade e o carregamento
 });
+
+
 
 
 export const metadata: Metadata = {
@@ -22,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${poppins.variable} bg-[#0D0D0D] md:px-8 text-white antialiased`}>
+      <body className={`${poppins.variable} $ bg-[#0D0D0D]  text-white antialiased`}>
       
         {children}
        

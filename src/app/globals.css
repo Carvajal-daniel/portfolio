@@ -2,6 +2,7 @@
 
 :root {
   --font-poppins: 'Poppins', sans-serif;
+  --font-title: 'Bebas Neue', sans-serif;
 }
 
 body {
@@ -10,4 +11,24 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@layer utilities {
+  @keyframes animated-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-gradient-bg {
+    background: linear-gradient(-45deg, #ff4d4d, #0d0ba0, #e11d48, #0e7556);
+    background-size: 400% 400%;
+    animation: animated-gradient 15s ease infinite;
+  }
 }
