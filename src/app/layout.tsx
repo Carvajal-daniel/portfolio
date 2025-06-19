@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
-
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -21,6 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <link rel="icon" href="/assets/asset13.svg" />
+
+        {/* ou use .png ou .svg se for outro formato */}
+      </head>
+
       <body
         className={`${poppins.className} ${poppins.variable} max-w-[2000px] mx-auto px-[4%] text-white antialiased`}
       >
