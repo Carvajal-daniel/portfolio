@@ -1,7 +1,7 @@
 const BgImg = () => {
     return (
         <div>
-            <img className="w-2xl blur rotate-180" src="/assets/asset18.svg" />
+            <img className="  blur-[6px] rotate-0" src="/assets/asset18.svg" />
         </div>
     )
 }

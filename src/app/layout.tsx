@@ -27,7 +27,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${poppins.className} ${poppins.variable} max-w-[2000px] mx-auto px-[4%] text-white antialiased`}
+        className={`${poppins.className} ${poppins.variable} scroll-smooth max-w-[1900px] mx-auto text-white antialiased`}
       >
         {children}
       </body>
