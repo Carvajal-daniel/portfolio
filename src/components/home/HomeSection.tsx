@@ -4,6 +4,7 @@ import ParticleSystem from "@/utils/ParticleSystem";
 import React from "react";
 import TextIntro from "./TextIntro";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const HomeSection = () => {
   return (
@@ -13,7 +14,12 @@ const HomeSection = () => {
       <div className="w-full md:overflow-visible overflow-hidden absolute md:relative md:right-0 md:top-0 top-[4rem] md:w-1/2 lg:w-[50%] xl:w-[45%] 2xl:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
         <ParticleSystem className="absolute md:ml-0 ml-48 inset-0 z-0" />
 
-        <div className="absolute inset-0 z-10 flex justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="absolute inset-0 z-10 flex justify-center items-center"
+        >
           <Image
             src="/assets/ia.webp"
             alt="Inteligência Artificial"
@@ -33,7 +39,7 @@ const HomeSection = () => {
               sm:ml-[24rem]
             `}
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
