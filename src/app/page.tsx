@@ -44,8 +44,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="w-full overflow-hidden">
-        <section className="pt-[88px] min-h-[calc(100vh-80px)]">
+      <main className="w-full ">
+        <section className=" pt-[88px] min-h-[calc(100vh-80px)]">
           <HomeSection />
         </section>
 
@@ -59,6 +59,8 @@ export default function Home() {
       <div className="hidden md:block">
         <CursorFollower />
       </div>
+
+      
     </>
   );
 }
