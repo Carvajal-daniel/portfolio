@@ -70,7 +70,7 @@ const TextIntro = () => {
 
           {/* Subtítulo com fade + slide */}
           <h2
-            className={`${poppins.className} text-gray-300 text-xl md:text-lg font-bold lg:text-xl leading-7 -mt-1 transform transition-all duration-600 ease-out ${
+            className={`${poppins.className} text-gray-300 text-xl md:text-lg font-bold lg:text-xl leading-7 mt-1 transform transition-all duration-600 ease-out ${
               animationPhase >= 3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >

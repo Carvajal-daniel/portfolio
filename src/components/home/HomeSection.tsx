@@ -11,7 +11,7 @@ const HomeSection = () => {
     <div className="w-full  md:px-[2%] flex flex-col md:flex-row items-center gap-4">
       <TextIntro />
 
-      <div className="w-full relative overflow-hidden md:overflow-visible md:relative md:right-0 md:top-0 -top-[35rem] md:w-1/2 lg:w-[50%] xl:w-[45%] 2xl:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+      <div className="w-full relative overflow-hidden md:overflow-visible md:relative md:right-0 md:top-0 -top-[36rem] md:w-1/2 lg:w-[50%] xl:w-[45%] 2xl:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
         <ParticleSystem className="absolute md:ml-0 ml-44 inset-0 z-0" />
 
         <motion.div
