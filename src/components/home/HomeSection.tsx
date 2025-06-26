@@ -8,11 +8,11 @@ import { motion } from "framer-motion";
 
 const HomeSection = () => {
   return (
-    <div className="w-full md:px-[2%] flex flex-col md:flex-row items-center gap-4">
+    <div className="w-full  md:px-[2%] flex flex-col md:flex-row items-center gap-4">
       <TextIntro />
 
-      <div className="w-full md:overflow-visible overflow-hidden absolute md:relative md:right-0 md:top-0 top-[4rem] md:w-1/2 lg:w-[50%] xl:w-[45%] 2xl:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
-        <ParticleSystem className="absolute md:ml-0 ml-48 inset-0 z-0" />
+      <div className="w-full relative overflow-hidden md:overflow-visible md:relative md:right-0 md:top-0 -top-[35rem] md:w-1/2 lg:w-[50%] xl:w-[45%] 2xl:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+        <ParticleSystem className="absolute md:ml-0 ml-44 inset-0 z-0" />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -23,10 +23,11 @@ const HomeSection = () => {
           <Image
             src="/assets/ia.webp"
             alt="Inteligência Artificial"
-            width={1000}
-            height={1000}
+            width={1200}
+            height={1200}
             priority
-            quality={100}
+            quality={95}
+            sizes="(max-width: 640px) 24rem, (max-width: 768px) 28rem, 100vw"
             className={`
               max-w-[24rem] 
               sm:max-w-[28rem] 
@@ -35,9 +36,12 @@ const HomeSection = () => {
               object-cover 
               object-center 
               md:ml-0 
-              ml-[20rem] 
+              ml-[18rem] 
               sm:ml-[24rem]
             `}
+            style={{
+              imageRendering: 'crisp-edges'
+            }}
           />
         </motion.div>
       </div>

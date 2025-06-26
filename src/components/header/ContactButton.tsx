@@ -16,18 +16,18 @@ const ContactButton = () => (
         ${bebasNeue.className}
         cursor-pointer
         border-gray-700 
-        text-lg
+        text-xl
         tracking-wider
         flex items-center justify-center
         px-4 py-2 md:px-6 md:py-3
          md:text-lg
-         lg:text-xl
+         lg:text-2xl
         text-white bg-transparent
         border
         hover:bg-[#E0E0E0] hover:text-[#121212]
         transition-colors duration-200
         rounded-md font-normal 
-        leading-none
+        leading-none pt-[9px]
       `}
     >
       Contato

@@ -26,13 +26,13 @@ const TextIntro = () => {
       setTimeout(() => setAnimationPhase(1), 100),   // Título principal
       setTimeout(() => setAnimationPhase(2), 400),   // Subtítulo
       setTimeout(() => setAnimationPhase(3), 700),   // Botão
-      setTimeout(() => setAnimationPhase(4), 900),   // Social Links
+      setTimeout(() => setAnimationPhase(5), 950),   // Social Links
     ];
     return () => timeouts.forEach(clearTimeout);
   }, []);
 
   return (
-    <div className="w-full md:px-[2%] overflow-hidden px-4 flex flex-col md:flex-row items-center gap-4">
+    <div className="w-full md:px-[2%] mt-8 overflow-hidden px-4 flex flex-col md:flex-row items-center gap-4">
       <div className="w-full md:w-1/2 lg:w-[50%]">
         <div className="mb-8">
           {/* Título Principal com fade + slide (cada palavra com delay interno) */}
@@ -70,8 +70,8 @@ const TextIntro = () => {
 
           {/* Subtítulo com fade + slide */}
           <h2
-            className={`${poppins.className} text-gray-300 text-xl md:text-lg font-bold lg:text-xl leading-7 mt-4 transform transition-all duration-600 ease-out ${
-              animationPhase >= 2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            className={`${poppins.className} text-gray-300 text-xl md:text-lg font-bold lg:text-xl leading-7 -mt-1 transform transition-all duration-600 ease-out ${
+              animationPhase >= 3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
             Transformando ideias em experiências digitais

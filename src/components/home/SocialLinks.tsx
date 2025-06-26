@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const iconVariants = {
@@ -11,21 +12,21 @@ const iconVariants = {
 const SocialLinks = () => {
   return (
     <div className="flex items-center justify-center gap-4 text-4xl">
-      <a>
+      <Link href="">
         <FaInstagram />
-      </a>
+      </Link>
 
-      <a>
+      <Link href="#">
         <FaLinkedin />
-      </a>
+      </Link>
 
-      <a>
+      <Link href="#">
         <FaGithub />
-      </a>
+      </Link>
 
-      <a>
+      <Link href="#">
         <FaWhatsapp />
-      </a>
+      </Link>
     </div>
   );
 };

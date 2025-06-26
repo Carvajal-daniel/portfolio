@@ -9,13 +9,13 @@ export default function Home() {
   <HeaderSection />
 </header>
 
-      <main className="w-full">
+      <main className="w-full ">
         <section className="pt-[88px] min-h-[calc(100vh-80px)]">
           <HomeSection />
         </section>
 
         <section className="pt-[80px] min-h-[calc(100vh-80px)]">...</section>
-
+         
         <section className="pt-[80px] min-h-[calc(100vh-80px)]">.....</section>
 
         <section className="pt-[80px] min-h-[calc(100vh-80px)]">....</section>
