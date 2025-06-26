@@ -32,10 +32,9 @@ const TextIntro = () => {
   }, []);
 
   return (
-    <div className="w-full md:px-[2%] mt-8 overflow-hidden px-4 flex flex-col md:flex-row items-center gap-4">
+   
       <div className="w-full md:w-1/2 lg:w-[50%]">
         <div className="mb-8">
-          {/* Título Principal com fade + slide (cada palavra com delay interno) */}
           <h1
             className={`${bebasNeue.className} z-50 text-8xl md:text-4xl lg:text-5xl text-white mt-12`}
             aria-label="Full Stack Developer"
@@ -78,7 +77,7 @@ const TextIntro = () => {
           <h2
             className={`${
               poppins.className
-            } text-gray-300 text-lg md:text-lg font-bold lg:text-xl  mt-1 transform transition-all duration-600 ease-out ${
+            } text-[#E0E0E0] text-[1.3rem] md:text-lg font-bold lg:text-xl  mt-1 leading-7 transform transition-all duration-600 ease-out ${
               animationPhase >= 3
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
@@ -91,11 +90,11 @@ const TextIntro = () => {
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div
             className={`inline-flex -mt-2 items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-full text-white text-sm font-medium mb-2
-  transform transition-all duration-700 ease-out ${
-    animationPhase >= 3
-      ? "opacity-100 translate-y-0 scale-100"
-      : "opacity-0 translate-y-4 scale-95"
-  } w-full md:w-80 justify-center`}
+        transform transition-all duration-700 ease-out ${
+          animationPhase >= 3
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 translate-y-4 scale-95"
+        } w-full md:w-80 justify-center`}
           >
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             Disponível para novos projetos
@@ -105,7 +104,7 @@ const TextIntro = () => {
           <Link href="#contact" className="w-full -mt-3 md:w-auto">
             <button
               aria-label="Baixar Currículo"
-              className={`w-full mt-2 md:w-auto px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
+              className={` w-full mt-2 md:w-auto px-6 py-3 md:px-8 md:py-4 border text-white font-semibold rounded-4xl hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
               ${
                 animationPhase >= 3
                   ? "opacity-100 translate-y-0 scale-100"
@@ -114,7 +113,7 @@ const TextIntro = () => {
               duration-600 ease-out`}
             >
               <FiDownload
-                className={`w-5 h-5 transform transition-all duration-400 ${
+                className={` text-orange-500 w-5 h-5 transform transition-all duration-400 ${
                   animationPhase >= 3 ? "rotate-0" : "rotate-180"
                 }`}
               />
@@ -134,7 +133,7 @@ const TextIntro = () => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };
 
