@@ -90,7 +90,7 @@ const TextIntro = () => {
 
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div
-            className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-full text-white text-sm font-medium mb-2
+            className={`inline-flex -mt-2 items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-full text-white text-sm font-medium mb-2
   transform transition-all duration-700 ease-out ${
     animationPhase >= 3
       ? "opacity-100 translate-y-0 scale-100"
