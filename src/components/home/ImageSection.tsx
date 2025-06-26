@@ -25,6 +25,8 @@ const ImageSection = () => {
             quality={95}
             sizes="(max-width: 640px) 24rem, (max-width: 768px) 28rem, 100vw"
             className={`
+              w-[21.6rem]
+              h-[21.6rem]
               max-w-[24rem] 
               sm:max-w-[28rem] 
               md:max-w-none 
@@ -32,7 +34,7 @@ const ImageSection = () => {
               object-cover 
               object-center 
               md:ml-0 
-              ml-[18rem] 
+              ml-[14rem] 
               sm:ml-[24rem]
             `}
             style={{

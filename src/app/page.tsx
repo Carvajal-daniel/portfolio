@@ -37,7 +37,7 @@ export default function Home() {
           w-full h-full
           max-w-[1500px]
           mx-auto
-          px-4
+          
           min-[1300px]:px-0
         ">
           <HeaderSection />

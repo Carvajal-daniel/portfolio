@@ -12,7 +12,7 @@ const HomeSection = () => {
         <TextIntro />
       </div>
 
-      <div className="w-full relative overflow-hidden md:overflow-visible md:relative md:right-0 md:top-0 -top-[34.5rem] md:w-1/2 lg:w-[50%] xl:w-[45%] 2xl:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+      <div className="w-full relative overflow-hidden md:overflow-visible md:relative md:right-0 md:top-0 -top-[39.6rem] md:w-1/2 lg:w-[50%] xl:w-[45%] 2xl:w-[50%] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
         <ImageSection />
       </div>
     </div>
