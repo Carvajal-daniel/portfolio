@@ -76,8 +76,8 @@ const TextIntro = () => {
           {/* Subtítulo com fade + slide */}
           <h2
             className={`${
-              poppins.className
-            } text-[#E0E0E0] text-[1.3rem] md:text-lg font-bold lg:text-xl  mt-1 leading-7 transform transition-all duration-600 ease-out ${
+              bebasNeue.className
+            } text-white text-[1.4rem] md:text-lg font-bold lg:text-xl  mt-0 leading-7 transform transition-all duration-600 ease-out ${
               animationPhase >= 3
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
@@ -89,7 +89,7 @@ const TextIntro = () => {
 
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div
-            className={`inline-flex -mt-2 items-center gap-2 px-6 py-4  bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-2xl text-white text-sm font-medium mb-2
+            className={`inline-flex -mt-2 items-center gap-2 px-6 py-[.9rem]  bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-lg text-white text-sm font-medium mb-2
         transform transition-all duration-700 ease-out ${
           animationPhase >= 3
             ? "opacity-100 translate-y-0 scale-100"
@@ -104,7 +104,7 @@ const TextIntro = () => {
           <Link href="#contact" className="w-full -mt-3 md:w-auto">
             <button
               aria-label="Baixar Currículo"
-              className={` w-full mt-4 md:w-auto px-6 py-3 md:px-8 md:py-4 border text-white font-semibold rounded-2xl hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
+              className={` w-full mt-4 md:w-auto px-6 py-3 md:px-8 md:py-4 border text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
               ${
                 animationPhase >= 3
                   ? "opacity-100 translate-y-0 scale-100"
