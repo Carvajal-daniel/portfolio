@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="w-full">
+      <main className="w-full overflow-hidden">
         <section className="pt-[88px] min-h-[calc(100vh-80px)]">
           <HomeSection />
         </section>
