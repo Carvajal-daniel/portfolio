@@ -36,7 +36,7 @@ const TextIntro = () => {
       <div className="w-full md:w-1/2 lg:w-[50%]">
         <div className="mb-8">
           <h1
-            className={`${bebasNeue.className} z-50 text-8xl md:text-4xl lg:text-5xl text-white mt-12`}
+            className={`${bebasNeue.className} z-50 text-8xl md:text-4xl lg:text-5xl text-white mt-4`}
             aria-label="Full Stack Developer"
           >
             <span
@@ -89,7 +89,7 @@ const TextIntro = () => {
 
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div
-            className={`inline-flex -mt-2 items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-full text-white text-sm font-medium mb-2
+            className={`inline-flex -mt-2 items-center gap-2 px-6 py-4  bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-2xl text-white text-sm font-medium mb-2
         transform transition-all duration-700 ease-out ${
           animationPhase >= 3
             ? "opacity-100 translate-y-0 scale-100"
@@ -104,7 +104,7 @@ const TextIntro = () => {
           <Link href="#contact" className="w-full -mt-3 md:w-auto">
             <button
               aria-label="Baixar Currículo"
-              className={` w-full mt-2 md:w-auto px-6 py-3 md:px-8 md:py-4 border text-white font-semibold rounded-4xl hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
+              className={` w-full mt-4 md:w-auto px-6 py-3 md:px-8 md:py-4 border text-white font-semibold rounded-2xl hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
               ${
                 animationPhase >= 3
                   ? "opacity-100 translate-y-0 scale-100"
