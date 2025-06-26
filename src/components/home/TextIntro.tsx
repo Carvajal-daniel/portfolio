@@ -23,16 +23,18 @@ const TextIntro = () => {
 
   useEffect(() => {
     const timeouts = [
-      setTimeout(() => setAnimationPhase(1), 100),   // Título principal
-      setTimeout(() => setAnimationPhase(2), 400),   // Subtítulo
-      setTimeout(() => setAnimationPhase(3), 700),   // Botão
-      setTimeout(() => setAnimationPhase(5), 950),   // Social Links
+      setTimeout(() => setAnimationPhase(1), 100), // Título principal
+      setTimeout(() => setAnimationPhase(2), 400), // Subtítulo
+      setTimeout(() => setAnimationPhase(3), 700), // Botão
+      setTimeout(() => setAnimationPhase(5), 950), // Social Links
     ];
     return () => timeouts.forEach(clearTimeout);
   }, []);
 
   return (
     <div className="w-full md:px-[2%] mt-8 overflow-hidden px-4 flex flex-col md:flex-row items-center gap-4">
+     
+
       <div className="w-full md:w-1/2 lg:w-[50%]">
         <div className="mb-8">
           {/* Título Principal com fade + slide (cada palavra com delay interno) */}
@@ -42,7 +44,9 @@ const TextIntro = () => {
           >
             <span
               className={`inline-block transform transition-all duration-600 ease-out ${
-                animationPhase >= 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                animationPhase >= 1
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: "0ms" }}
             >
@@ -51,7 +55,9 @@ const TextIntro = () => {
             <br />
             <span
               className={`inline-block transform transition-all duration-600 ease-out ${
-                animationPhase >= 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                animationPhase >= 1
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: "100ms" }}
             >
@@ -60,7 +66,9 @@ const TextIntro = () => {
             <br />
             <span
               className={`inline-block bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent transform transition-all duration-600 ease-out ${
-                animationPhase >= 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                animationPhase >= 1
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: "200ms" }}
             >
@@ -70,20 +78,43 @@ const TextIntro = () => {
 
           {/* Subtítulo com fade + slide */}
           <h2
-            className={`${poppins.className} text-gray-300 text-lg md:text-lg font-bold lg:text-xl  mt-1 transform transition-all duration-600 ease-out ${
-              animationPhase >= 3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            className={`${
+              poppins.className
+            } text-gray-300 text-lg md:text-lg font-bold lg:text-xl  mt-1 transform transition-all duration-600 ease-out ${
+              animationPhase >= 3
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-6"
             }`}
           >
             Transformando ideias em experiências digitais
           </h2>
+
+          
         </div>
 
+  
+
         <div className="flex flex-col md:flex-row md:items-center gap-4">
+
+
+            <div
+  className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-300 text-sm font-medium mb-2
+  transform transition-all duration-700 ease-out ${
+    animationPhase >= 3
+      ? "opacity-100 translate-y-0 scale-100"
+      : "opacity-0 translate-y-4 scale-95"
+  } w-full md:w-80 justify-center`}
+>
+  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+  Disponível para novos projetos
+</div>
+
+
           {/* Botão com scale + fade + slide */}
           <Link href="#contact" className="w-full -mt-3 md:w-auto">
             <button
               aria-label="Baixar Currículo"
-              className={`w-full mt-2 md:w-auto px-6 py-4 md:px-8 md:py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
+              className={`w-full mt-2 md:w-auto px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
               ${
                 animationPhase >= 3
                   ? "opacity-100 translate-y-0 scale-100"
@@ -103,13 +134,20 @@ const TextIntro = () => {
           {/* Social Links com fade + slide lateral */}
           <div
             className={`flex mt-2 justify-center md:justify-start transform transition-all duration-600 ease-out ${
-              animationPhase >= 4 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
+              animationPhase >= 4
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-6"
             }`}
           >
             <SocialLinks />
           </div>
+
+          
         </div>
       </div>
+
+
+
     </div>
   );
 };
