@@ -70,7 +70,7 @@ const TextIntro = () => {
 
           {/* Subtítulo com fade + slide */}
           <h2
-            className={`${poppins.className} text-gray-300 text-xl md:text-lg font-bold lg:text-xl leading-7 mt-1 transform transition-all duration-600 ease-out ${
+            className={`${poppins.className} text-gray-300 text-lg md:text-lg font-bold lg:text-xl  mt-1 transform transition-all duration-600 ease-out ${
               animationPhase >= 3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -83,7 +83,7 @@ const TextIntro = () => {
           <Link href="#contact" className="w-full -mt-3 md:w-auto">
             <button
               aria-label="Baixar Currículo"
-              className={`w-full md:w-auto px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
+              className={`w-full mt-2 md:w-auto px-6 py-4 md:px-8 md:py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 flex items-center gap-2 justify-center
               ${
                 animationPhase >= 3
                   ? "opacity-100 translate-y-0 scale-100"
@@ -102,7 +102,7 @@ const TextIntro = () => {
 
           {/* Social Links com fade + slide lateral */}
           <div
-            className={`flex justify-center md:justify-start transform transition-all duration-600 ease-out ${
+            className={`flex mt-2 justify-center md:justify-start transform transition-all duration-600 ease-out ${
               animationPhase >= 4 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
             }`}
           >
