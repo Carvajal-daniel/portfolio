@@ -33,8 +33,6 @@ const TextIntro = () => {
 
   return (
     <div className="w-full md:px-[2%] mt-8 overflow-hidden px-4 flex flex-col md:flex-row items-center gap-4">
-     
-
       <div className="w-full md:w-1/2 lg:w-[50%]">
         <div className="mb-8">
           {/* Título Principal com fade + slide (cada palavra com delay interno) */}
@@ -88,27 +86,20 @@ const TextIntro = () => {
           >
             Transformando ideias em experiências digitais
           </h2>
-
-          
         </div>
 
-  
-
         <div className="flex flex-col md:flex-row md:items-center gap-4">
-
-
-            <div
-  className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-300 text-sm font-medium mb-2
+          <div
+            className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/20 to-pink-500/20 backdrop-blur-sm border border-orange-500 rounded-full text-white text-sm font-medium mb-2
   transform transition-all duration-700 ease-out ${
     animationPhase >= 3
       ? "opacity-100 translate-y-0 scale-100"
       : "opacity-0 translate-y-4 scale-95"
   } w-full md:w-80 justify-center`}
->
-  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-  Disponível para novos projetos
-</div>
-
+          >
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            Disponível para novos projetos
+          </div>
 
           {/* Botão com scale + fade + slide */}
           <Link href="#contact" className="w-full -mt-3 md:w-auto">
@@ -141,13 +132,8 @@ const TextIntro = () => {
           >
             <SocialLinks />
           </div>
-
-          
         </div>
       </div>
-
-
-
     </div>
   );
 };
