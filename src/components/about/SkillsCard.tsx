@@ -10,16 +10,16 @@ export default function SkillsCard() {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-pink-500/5 to-orange-500/5 rounded-2xl"></div>
       
-      <h3 className="text-2xl font-bold  text-white mb-6 relative z-10 flex items-center gap-3">
-        <span className="text-2xl">💻</span> Competências Técnicas
+      <h3 className="text-2xl font-bold text-center md:text-left text-white mb-6 relative z-10 flex items-center justify-center gap-3">
+         Competências Técnicas
       </h3>
       
-      <div className="space-y-6 md:text-xl relative z-10">
-        <div>
+      <div className="space-y-6 md:text-xl  relative z-10">
+        <div className="flex flex-col md:block items-center justify-center">
           <h4 className=" font-semibold mb-3 flex items-center gap-2">
             <span className="text-pink-400">🎨</span> Frontend
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex md:block items-center justify-center flex-wrap gap-2">
             <span className="px-3 py-1 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-full text-sm border border-orange-500/30 shadow-lg shadow-orange-500/20">Next.js</span>
             <span className="px-3 py-1 bg-gradient-to-r from-orange-500/20 to-pink-500/20  rounded-full text-sm border border-orange-500/30 shadow-lg shadow-orange-500/20">React</span>
             <span className="px-3 py-1 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-full text-sm border border-orange-500/30 shadow-lg shadow-orange-500/20">TypeScript</span>
@@ -29,10 +29,10 @@ export default function SkillsCard() {
         </div>
         
         <div>
-          <h4 className="text-orange-400  font-semibold mb-3 flex items-center gap-2 ">
+          <h4 className="text-orange-400  font-semibold mb-3 flex items-center justify-center gap-2 md:block ">
             <span className="text-pink-400">⚙️</span> Backend
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center justify-center md:block flex-wrap gap-2">
             <span className="px-3 py-1 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full text-sm border border-pink-500/30 shadow-lg shadow-pink-500/20">Node.js</span>
             <span className="px-3 py-1 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full text-sm border border-pink-500/30 shadow-lg shadow-pink-500/20">Express</span>
             <span className="px-3 py-1 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full text-sm border border-pink-500/30 shadow-lg shadow-pink-500/20">Fastify</span>
@@ -41,10 +41,10 @@ export default function SkillsCard() {
         </div>
 
         <div>
-          <h4 className="text-orange-400 font-semibold mb-3 flex items-center gap-2">
+          <h4 className="text-orange-400 font-semibold mb-3 flex items-center justify-center md:block gap-2">
             <span className="text-pink-400">🗄️</span> Banco de Dados
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center justify-center md:block flex-wrap gap-2">
             <span className="px-3 py-1 bg-gradient-to-r from-orange-400/20 to-pink-400/20 rounded-full text-sm border border-orange-400/30 shadow-lg shadow-orange-400/20">PostgreSQL</span>
             <span className="px-3 py-1 bg-gradient-to-r from-orange-400/20 to-pink-400/20 rounded-full text-sm border border-orange-400/30 shadow-lg shadow-orange-400/20">MongoDB</span>
             <span className="px-3 py-1 bg-gradient-to-r from-orange-400/20 to-pink-400/20 rounded-full text-sm border border-orange-400/30 shadow-lg shadow-orange-400/20">Prisma ORM</span>
@@ -52,10 +52,10 @@ export default function SkillsCard() {
         </div>
         
         <div>
-          <h4 className="text-orange-400 font-semibold mb-3 flex items-center gap-2">
+          <h4 className="text-orange-400 font-semibold mb-3 flex items-center justify-center md:block gap-2">
             <span className="text-pink-400">🔧</span> DevOps & Ferramentas
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center justify-center md:block flex-wrap gap-2">
             <span className="px-3 py-1 bg-gradient-to-r from-pink-400/20 to-orange-400/20 rounded-full text-sm border border-pink-400/30 shadow-lg shadow-pink-400/20">Docker</span>
             <span className="px-3 py-1 bg-gradient-to-r from-pink-400/20 to-orange-400/20 rounded-full text-sm border border-pink-400/30 shadow-lg shadow-pink-400/20">Git</span>
             <span className="px-3 py-1 bg-gradient-to-r from-pink-400/20 to-orange-400/20 rounded-full text-sm border border-pink-400/30 shadow-lg shadow-pink-400/20">Linux</span>
