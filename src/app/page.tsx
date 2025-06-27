@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import HeaderSection from "@/components/header/HeaderSection";
 import HomeSection from "@/components/home/HomeSection";
 import CursorFollower from "@/utils/CursorFollower";
+import AboutMe from "@/components/about/AboutMe";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +56,9 @@ export default function Home() {
           <HomeSection />
         </section>
 
-        <section className="pt-[80px] min-h-[calc(100vh-80px)]">...</section>
+        <section className="pt-[80px] min-h-[calc(100vh-80px)]">
+          <AboutMe/>
+        </section>
 
         <section className="pt-[80px] min-h-[calc(100vh-80px)]">.....</section>
 
