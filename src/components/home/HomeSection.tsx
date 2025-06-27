@@ -8,7 +8,7 @@ import Navigation from "../Navigation";
 
 const HomeSection = () => {
   return (
-    <div className=" relative w-full flex flex-col md:flex-row items-center gap-4">
+    <div className="  md:-mt-30 min-h-screen relative w-full flex flex-col md:flex-row items-center  gap-4 ">
       <div className="w-full mt-8 overflow-hidden px-4 flex flex-col md:flex-row items-center gap-4">
         <TextIntro />
       </div>

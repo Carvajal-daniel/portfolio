@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import HeaderSection from "@/components/header/HeaderSection";
 import HomeSection from "@/components/home/HomeSection";
 import CursorFollower from "@/utils/CursorFollower";
@@ -10,65 +10,95 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
 
-  useEffect(() => {
-    setHasMounted(true); // Confirma que estamos no client
-
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+  // Otimiza o handler de scroll com useCallback
+  const handleScroll = useCallback(() => {
+    const scrollTop = window.scrollY;
+    setIsScrolled(scrollTop > 50);
   }, []);
 
-  // Evita o hydration mismatch — só renderiza após montagem no client
-  if (!hasMounted) return null;
+  useEffect(() => {
+    setHasMounted(true);
+
+    // Adiciona listener de scroll
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  // Evita hydration mismatch
+  if (!hasMounted) {
+    return (
+      <div className="min-h-screen bg-black">
+        {/* Loading placeholder opcional */}
+      </div>
+    );
+  }
 
   return (
     <>
+      {/* Header fixo com transição suave */}
       <header
         className={`
           fixed top-0 left-0 w-full h-[75px] z-50
           transition-all duration-300 ease-in-out
           ${
             isScrolled
-              ? "bg-black/60 backdrop-blur-md shadow-lg"
+              ? "bg-black/70 backdrop-blur-lg shadow-xl border-b border-white/10"
               : "bg-transparent"
           }
         `}
       >
-        <div
-          className="
-            w-full h-full
-            max-w-[1500px]
-            mx-auto
-            min-[1300px]:px-0
-          "
-        >
+        <div className="w-full h-full max-w-[1500px] mx-auto px-4 min-[1300px]:px-0">
           <HeaderSection />
         </div>
       </header>
 
+      {/* Conteúdo principal */}
       <main className="w-full">
-        <section className="pt-[88px] min-h-[calc(100vh-80px)]">
+        {/* Seção Home */}
+        <section 
+          id="home"
+          className="pt-[75px] min-h-screen flex items-center"
+        >
           <HomeSection />
         </section>
 
-        <section className="pt-[80px] min-h-[calc(100vh-80px)]">
-          <AboutMe/>
+        {/* Seção About */}
+        <section 
+          id="about"
+          className=" -mt-70 md:mt-0 flex items-center"
+        >
+          <AboutMe />
         </section>
 
-        <section className="pt-[80px] min-h-[calc(100vh-80px)]">.....</section>
+        {/* Seções futuras - com IDs para navegação */}
+        <section 
+          id="projects"
+          className="py-20 min-h-screen flex items-center justify-center"
+        >
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">Projetos</h2>
+            <p className="text-gray-400">Seção em desenvolvimento...</p>
+          </div>
+        </section>
 
-        <section className="pt-[80px] min-h-[calc(100vh-80px)]">....</section>
+        <section 
+          id="contact"
+          className="py-20 min-h-screen flex items-center justify-center"
+        >
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">Contato</h2>
+            <p className="text-gray-400">Seção em desenvolvimento...</p>
+          </div>
+        </section>
       </main>
 
-      {/* Só mostra no client após mount para evitar erro */}
-      <div className="hidden md:block">
-        <CursorFollower />
-      </div>
+      {/* Cursor personalizado apenas em desktop */}
+      {hasMounted && (
+        <div className="hidden md:block pointer-events-none">
+          <CursorFollower />
+        </div>
+      )}
     </>
   );
 }
