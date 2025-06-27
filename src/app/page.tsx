@@ -113,7 +113,7 @@ export default function Home() {
         {/* Seção Home */}
         <section 
           id="home"
-          className=" mt-30 md:-mt-10 min-h-screen flex items-center pt-[75px]"
+          className=" mt-24 md:-mt-10 min-h-screen flex items-center pt-[75px]"
         >
           <HomeSection />
         </section>
@@ -121,7 +121,7 @@ export default function Home() {
         {/* Seção About */}
         <section 
           id="about"
-          className=" -mt-70 md:-mt-16 min-h-screen flex items-center py-20"
+          className=" -mt-64 md:-mt-16 min-h-screen flex items-center "
         >
           <AboutMe />
         </section>
