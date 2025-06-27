@@ -17,7 +17,7 @@ const Navigation = () => {
   return (
     <>
       {/* Navegação lateral para telas grandes (lg+) */}
-      <nav className="hidden md:block lg:flex fixed top-[65%] transform -translate-y-1/2  rounded-2xl px-3 py-6 flex-col gap-8 z-50  animate-slide-in-left">
+      <nav className="  hidden md:block lg:flex fixed top-[65%] transform -translate-y-1/2  rounded-2xl px-3 py-6 flex-col gap-8 z-50 animate-slide-in-left">
         {navItems.map((item, index) => {
           const isActive = pathname === item.href;
 
@@ -34,12 +34,12 @@ const Navigation = () => {
             >
               <div className={`p-3 rounded-xl transition-all duration-300 ${
                 isActive 
-                  ? "bg-blue-500/20 text-white" 
+                  ? "bg-gradient-to-b from-[#b96301] to-[#e52e71] text-white" 
                   : "group-hover:bg-white/10"
               }`}>
                 {item.icon}
               </div>
-              <span className="text-[0.65rem] mt-2 font-medium">{item.label}</span>
+              <span className="text-[0.75rem] mt-2 font-medium">{item.label}</span>
             </Link>
           );
         })}

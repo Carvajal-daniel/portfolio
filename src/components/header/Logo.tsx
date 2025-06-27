@@ -19,11 +19,11 @@ const Logo = () => (
       </span>
       <span className="w-[3px] h-[14px] group-hover:bg-[#313131] bg-white blink transition-colors duration-300" />
     </div>
-    <h1
+    <h2
       className={`${bebasNeue.className} mt-1 text-[2rem] lg:text-4xl text-[#E0E0E0] font-normal tracking-wider`}
     >
       DC
-    </h1>
+    </h2>
   </a>
 );
 

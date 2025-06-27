@@ -26,3 +26,26 @@ body {
   animation: blink 1s infinite;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+  h1{
+    font-size: 5.4rem;
+    line-height: 5.5rem;
+
+  }
+
+
+  .imagem{
+    margin-top: 2rem;
+    margin-left: 4rem;
+    width: 27rem;
+    height: 30rem;
+  }
+
+  .navigation{
+    margin-top: 40rem;
+  
+  }
+
+}

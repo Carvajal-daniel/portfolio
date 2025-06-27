@@ -32,14 +32,18 @@ const TextIntro = () => {
   }, []);
 
   return (
-    <div className="w-screen px-4 sm:px-8 py-10">
+    <div className="w-screen homeLeft px-4 lg:-mt-4 sm:px-8 py-10">
       <div className="w-full">
         <div className="mb-8">
           <h1
             className={`${bebasNeue.className} z-50 
               text-[5rem] leading-20 
-              md:text-[7rem] md:ml-18 md:leading-28 
-              2xl:text-9xl 
+              md:text-[7rem] md:ml-7 md:leading-28 
+              xl:text-[9rem] xl:leading-30
+              xl:-mt-8
+              2xl:text-[9.5rem] 
+              2xl:leading-34
+              2xl:mt-4
               text-white 
               -mt-1`}
             aria-label="Full Stack Developer"
@@ -85,9 +89,12 @@ const TextIntro = () => {
             className={`${bebasNeue.className} 
               text-white 
               text-[1.9rem] 
-              md:text-3xl
-              md:ml-18 
-              2xl:text-2xl 
+              md:text-2xl
+              md:ml-7 
+              md:-mt-1
+              lg:w-full
+              lg:-mt-1
+              2xl:text-3xl 
               font-bold 
               mt-2 
               leading-8 
@@ -102,16 +109,19 @@ const TextIntro = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-center md:ml-18 gap-4">
+        <div className="flex flex-col md:flex-col  md:w-full lg:flex-row md:items-left md:ml-7 gap-4">
           <Link href="#contact" className="w-full md:w-auto">
             <button
               aria-label="Baixar Currículo"
               className={`w-full mt-2 
                 md:w-auto 
                 px-6 py-3 
-                md:px-8 md:py-4 
-                md:text-lg
-                md:-mt-1
+                md:px-8 md:py-3 
+                md:text-md
+                md:-mt-4
+                lg:-mt-4
+                lg:py-4
+                lg:px-4
                 bg-gradient-to-r from-orange-500 to-pink-500 
                 text-white font-semibold 
                 rounded-lg 
@@ -136,7 +146,7 @@ const TextIntro = () => {
           </Link>
 
           <div
-            className={`flex mt-2 justify-center md:justify-start 
+            className={`flex mt-2 lg:-mt-2 justify-center md:justify-start 
               transform transition-all duration-600 ease-out 
               ${
                 animationPhase >= 4

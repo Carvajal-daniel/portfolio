@@ -23,8 +23,11 @@ const ImageSection = () => {
           quality={95}
           sizes="(max-width: 640px) 24rem, (max-width: 768px) 28rem, 100vw"
           className={`
+            imagem
             w-[21.6rem]
              h-[21.6rem]
+            lg:w-[33rem] lg:h-[33rem]
+            lg:mt-12
             max-w-[24rem]
              sm:max-w-[28rem]
             md:w-[42rem]
@@ -32,6 +35,10 @@ const ImageSection = () => {
              md:mr-20
               md:max-w-none
                md:max-h-screen
+               xl:w-[40rem]
+               xl:h-[40rem]
+               2xl:w-[45rem]
+               2xl:h-[45rem]
             object-cover
              object-center
             ml-[14rem]

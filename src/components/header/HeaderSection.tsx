@@ -12,7 +12,7 @@ const HeaderSection = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="bg-transparent px-3 py-3"
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className=" mx-auto flex justify-between items-center">
         <Logo />
         <ContactButton />
       </div>
