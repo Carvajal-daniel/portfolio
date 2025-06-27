@@ -4,7 +4,6 @@ import React from "react";
 import TextIntro from "./TextIntro";
 import ImageSection from "./ImageSection";
 import AnimatedBgImage from "@/utils/BgImageProps";
-import Navigation from "../Navigation";
 
 const HomeSection = () => {
   return (

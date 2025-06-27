@@ -58,7 +58,7 @@ export default function Home() {
         {/* Seção Home */}
         <section 
           id="home"
-          className="pt-[75px] min-h-screen flex items-center"
+          className="mt-36 md:mt-0 min-h-screen flex items-center"
         >
           <HomeSection />
         </section>
