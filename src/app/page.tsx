@@ -121,7 +121,7 @@ export default function Home() {
         {/* Seção About */}
         <section 
           id="about"
-          className=" -mt-64 md:-mt-10 min-h-screen flex items-center "
+          className=" -mt-80 md:-mt-10 min-h-screen flex items-center "
         >
           <AboutMe />
         </section>
