@@ -11,7 +11,7 @@ const ImageSection = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" }}
         className="absolute md:relative md:rigth-0 overflow-hidden inset-0 z-10 flex justify-center items-center"
       >
         <Image

@@ -9,6 +9,8 @@ import AboutMe from "@/components/about/AboutMe";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
+  const [currentSection, setCurrentSection] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   // Otimiza o handler de scroll com useCallback
   const handleScroll = useCallback(() => {
@@ -16,14 +18,67 @@ export default function Home() {
     setIsScrolled(scrollTop > 50);
   }, []);
 
+  // Função para ir para próxima/anterior seção
+  interface GoToSectionParams {
+    direction: 'up' | 'down';
+  }
+
+  const sections: string[] = ['home', 'about', 'projects', 'contact'];
+
+  const goToSection = useCallback(
+    (direction: GoToSectionParams['direction']) => {
+      if (isScrolling) return;
+
+      let newSection: number = currentSection;
+
+      if (direction === 'down' && currentSection < sections.length - 1) {
+        newSection = currentSection + 1;
+      } else if (direction === 'up' && currentSection > 0) {
+        newSection = currentSection - 1;
+      }
+
+      if (newSection !== currentSection) {
+        setIsScrolling(true);
+        setCurrentSection(newSection);
+
+        document.getElementById(sections[newSection])?.scrollIntoView({
+          behavior: 'smooth',
+        });
+
+        // Reset scroll flag after animation
+        setTimeout(() => setIsScrolling(false), 1000);
+      }
+    },
+    [currentSection, isScrolling]
+  );
+
+  // Handler para wheel scroll
+  interface WheelEventHandler {
+    (e: WheelEvent): void;
+  }
+
+  const handleWheel: WheelEventHandler = useCallback((e: WheelEvent) => {
+    e.preventDefault();
+    
+    if (e.deltaY > 0) {
+      goToSection('down');
+    } else {
+      goToSection('up');
+    }
+  }, [goToSection]);
+
   useEffect(() => {
     setHasMounted(true);
 
-    // Adiciona listener de scroll
+    // Adiciona listeners
     window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, [handleScroll, handleWheel]);
 
   // Evita hydration mismatch
   if (!hasMounted) {
@@ -43,7 +98,7 @@ export default function Home() {
           transition-all duration-300 ease-in-out
           ${
             isScrolled
-              ? "bg-black/70 backdrop-blur-lg shadow-xl border-b border-white/10"
+              ? "bg-black/30 backdrop-blur-lg shadow-xl border-b border-white/10"
               : "bg-transparent"
           }
         `}
@@ -58,7 +113,7 @@ export default function Home() {
         {/* Seção Home */}
         <section 
           id="home"
-          className="mt-30 md:mt-0 min-h-screen flex items-center"
+          className=" mt-30 md:-mt-10 min-h-screen flex items-center pt-[75px]"
         >
           <HomeSection />
         </section>
@@ -66,7 +121,7 @@ export default function Home() {
         {/* Seção About */}
         <section 
           id="about"
-          className=" -mt-70 md:mt-0 flex items-center"
+          className=" -mt-70 md:-mt-16 min-h-screen flex items-center py-20"
         >
           <AboutMe />
         </section>
@@ -74,7 +129,7 @@ export default function Home() {
         {/* Seções futuras - com IDs para navegação */}
         <section 
           id="projects"
-          className="py-20 min-h-screen flex items-center justify-center"
+          className="min-h-screen flex items-center justify-center py-20"
         >
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Projetos</h2>
@@ -84,7 +139,7 @@ export default function Home() {
 
         <section 
           id="contact"
-          className="py-20 min-h-screen flex items-center justify-center"
+          className="min-h-screen flex items-center justify-center py-20"
         >
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Contato</h2>

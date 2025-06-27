@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 export default function SkillsCard() {
   return (
     <motion.div
-      className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden"
+      className="bg-zinc-900/50 border  border-zinc-800 rounded-2xl p-8 backdrop-sm relative overflow-hidden"
       initial={{ opacity: 0, x: 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.3, duration: 0.6 }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-pink-500/5 to-orange-500/5 rounded-2xl"></div>
       
-      <h3 className="text-2xl font-bold text-white mb-6 relative z-10 flex items-center gap-3">
+      <h3 className="text-2xl font-bold  text-white mb-6 relative z-10 flex items-center gap-3">
         <span className="text-2xl">💻</span> Competências Técnicas
       </h3>
       
-      <div className="space-y-6 relative z-10">
+      <div className="space-y-6 md:text-xl relative z-10">
         <div>
           <h4 className=" font-semibold mb-3 flex items-center gap-2">
             <span className="text-pink-400">🎨</span> Frontend
@@ -29,7 +29,7 @@ export default function SkillsCard() {
         </div>
         
         <div>
-          <h4 className="text-orange-400 font-semibold mb-3 flex items-center gap-2">
+          <h4 className="text-orange-400  font-semibold mb-3 flex items-center gap-2 ">
             <span className="text-pink-400">⚙️</span> Backend
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -63,7 +63,7 @@ export default function SkillsCard() {
         </div>
       </div>
 
-      <div className="mt-8 pt-6 border-t border-zinc-800 relative z-10">
+      <div className="mt-8 md:text-lg pt-6 border-t border-zinc-800 relative z-10">
         <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
           <span className="text-orange-400">✨</span> Diferenciais
         </h4>

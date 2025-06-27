@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="w-full min-h-screen bg-zinc-950/10 text-white px-2 py-20 flex items-center justify-center relative overflow-hidden"
+      className="w-full min-h-screen text-white px-2 py-20 flex items-center justify-center relative overflow-hidden"
     >
       <BackgroundTech />
       <div className="max-w-[94%] w-full relative z-10">
