@@ -71,34 +71,11 @@ export default function IntroContent() {
           
           <p className="text-base md:text-lg leading-relaxed text-zinc-300">
             Minha jornada profissional é marcada pela <span className="text-orange-400 font-medium">
-            determinação</span>, <span className="text-pink-400 font-medium">adaptabilidade</span> e 
-            uma paixão genuína por transformar ideias em realidade através da tecnologia.
+            determinação</span>, <span className="text-pink-400 font-medium">adaptabilidade</span> Minha jornada profissional é marcada pela determinação, adaptabilidade e uma paixão genuína por transformar ideias em soluções tecnológicas reais.
           </p>
         </motion.div>
 
-        {/* História pessoal */}
-        <motion.div
-          variants={staggerChild}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-gradient-to-br from-zinc-900/40 to-zinc-800/20 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-zinc-700/30 shadow-lg"
-        >
-          <div className="flex  text-left items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-md">
-              🌎
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-white">Jornada Internacional</h3>
-              <p className="text-zinc-300 leading-relaxed">
-                Migrei da <span className="text-yellow-400 font-medium">Venezuela</span> para o 
-                <span className="text-green-400 font-medium"> Brasil</span>, desenvolvendo fluência 
-                completa em português de forma autodidata. Esta experiência fortaleceu exponencialmente 
-                minha capacidade de <span className="text-orange-400">adaptação</span>, 
-                <span className="text-pink-400"> aprendizado contínuo</span> e 
-                <span className="text-purple-400"> resolução de problemas complexos</span>.
-              </p>
-            </div>
-          </div>
-        </motion.div>
+    
 
         {/* Skills em grid responsivo */}
         <motion.div
@@ -118,7 +95,7 @@ export default function IntroContent() {
               <div className="space-y-2">
                 <p className="text-zinc-200 font-medium">Frontend & Backend</p>
                 <p className="text-zinc-400 text-sm leading-relaxed">
-                  Next.js, React, Node.js, TypeScript, PostgreSQL, Docker
+                  Next.js, React, Node.js, TypeScript, Golang, PostgreSQL, Docker
                 </p>
               </div>
             </div>

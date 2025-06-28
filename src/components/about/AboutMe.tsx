@@ -1,4 +1,5 @@
 "use client";
+import AboutMeTimeline from "../Jornada/AboutMeTimeline";
 import BackgroundTech from "./BackgroundTech";
 import IntroContent from "./IntroContent";
 import SkillsCard from "./SkillsCard";
@@ -17,6 +18,7 @@ export default function AboutMe() {
           </div>
           <SkillsCard />
         </div>
+
       </div>
     </section>
   );
