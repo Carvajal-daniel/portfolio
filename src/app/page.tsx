@@ -6,7 +6,7 @@ import HomeSection from "@/components/home/HomeSection";
 import CursorFollower from "@/utils/CursorFollower";
 import AboutMe from "@/components/about/AboutMe";
 import AboutMeTimeline from "@/components/Jornada/AboutMeTimeline";
-import AnimatedBgImage from "@/utils/BgImageProps";
+
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,30 +50,35 @@ export default function Home() {
       </header>
 
       {/* Conteúdo principal */}
-      <main className="w-full">
+      <main className="w-full min-h-screen">
         {/* Home */}
-        <section id="home" className="mt-20 min-h-screen flex items-center pt-[75px] md:mt-0 ">
+        <section
+          id="home"
+          className="mt-20 min-h-screen flex items-center pt-[75px] md:mt-0 "
+        >
           <HomeSection />
         </section>
 
         {/* About */}
-        <section id="about" className="min-h-screen -mt-80 md:mt-0 flex items-center">
+        <section
+          id="about"
+          className="min-h-screen -mt-[23rem] md:-mt-10 flex items-center"
+        >
           <AboutMe />
         </section>
 
         {/* Timeline */}
-        <section id="projects" className=" relative min-h-screen -mt-10 flex items-center justify-center py-20">
-
-          <div className="hidden md:block absolute blur-3xl -z-10 top-16 mr-[70rem] w-[180rem] rotate-180">
-        <AnimatedBgImage />
-      </div>
-
-          
+        <section
+          id="projects"
+          className="bg-zinc-900/30 overflow-x-hidden relative min-h-screen -mt-10 flex items-center justify-center py-20"
+        >
           <AboutMeTimeline />
         </section>
 
-     
-        <section id="contact" className="min-h-screen flex items-center justify-center py-20">
+        <section
+          id="contact"
+          className="min-h-screen flex items-center justify-center py-20"
+        >
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Contato</h2>
             <p className="text-gray-400">Seção em desenvolvimento...</p>

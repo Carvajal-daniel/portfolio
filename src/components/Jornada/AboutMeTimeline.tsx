@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Award, Code, Briefcase, GraduationCap } from 'lucide-react';
 import { Bebas_Neue } from 'next/font/google';
-import AnimatedBgImage from '@/utils/BgImageProps';
+import AnimatedBgImage from '@/utils/AnimatedBgImage';
 
 
 const bebasNeue = Bebas_Neue({
@@ -199,7 +199,8 @@ export default function AboutMeTimeline() {
 
   return (
     <div>
-      <div className="max-w-[94%] w-full relative z-10">
+      <div className="w-full px-4 lg:-mt-10 sm:px-6 lg:px-8 relative z-10">
+
         {/* Timeline Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -208,7 +209,7 @@ export default function AboutMeTimeline() {
           className="mt-20"
         >
           <div className="text-center mb-12">
-            <h3 className={` ${bebasNeue.className} text-3xl md:text-5xl xl:text-6xl font-bold bg-gradient-to-r text-white  mb-4`}>
+            <h3 className={` ${bebasNeue.className} text-4xl -mt-10 md:mt-0 md:text-5xl xl:text-6xl font-bold bg-gradient-to-r text-white  mb-6`}>
               Minha Jornada
             </h3>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">

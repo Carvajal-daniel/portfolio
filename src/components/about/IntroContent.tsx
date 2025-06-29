@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import { Bebas_Neue } from "next/font/google";
 
 const bebasNeue = Bebas_Neue({
@@ -9,33 +9,39 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
 });
 
-// Variáveis de animação reutilizáveis
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-100px" }
-};
-
+// Variantes de animação
 const staggerContainer = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1 },
-  viewport: { once: true, margin: "-100px" }
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.3
+    }
+  }
 };
 
-const staggerChild = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 }
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } }
 };
 
 export default function IntroContent() {
   return (
-    <div className="max-w-3xl text-center md:text-left mx-auto space-y-6 px-4 md:px-6 md:text-xl">
-      {/* Header com título e linha decorativa */}
-      <motion.div
-        {...fadeInUp}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="space-y-3"
-      >
+    <motion.div
+      className="max-w-3xl text-center md:text-left mx-auto space-y-6 px-4 md:px-6 md:text-xl"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.3
+          }
+        }
+      }}
+    >
+      {/* Header */}
+      <motion.div variants={fadeInUp} className="space-y-3">
         <h2 className={`
           ${bebasNeue.className} 
           text-5xl md:text-5xl lg:text-6xl font-bold 
@@ -44,24 +50,14 @@ export default function IntroContent() {
           Sobre Mim
         </h2>
         <div className="w-full flex justify-center md:block">
-        <div className="w-20  h-1 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 rounded-full shadow-lg shadow-orange-400/20"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 rounded-full shadow-lg shadow-orange-400/20"></div>
         </div>
       </motion.div>
 
-      {/* Conteúdo principal */}
-      <motion.div
-        variants={staggerContainer}
-        initial="initial"
-        whileInView="whileInView"
-        transition={{ staggerChildren: 0.2 }}
-        className="space-y-5"
-      >
-        {/* Introdução principal */}
-        <motion.div
-          variants={staggerChild}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="space-y-4"
-        >
+      {/* Conteúdo principal com animação em cascata */}
+      <motion.div variants={staggerContainer}>
+        {/* Parágrafos */}
+        <motion.div variants={fadeInUp} className="space-y-4">
           <p className="text-lg md:text-xl leading-relaxed text-zinc-100 font-light">
             <span className="text-transparent bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text font-semibold">
               Daniel Carvajal
@@ -71,22 +67,16 @@ export default function IntroContent() {
           
           <p className="text-base md:text-lg leading-relaxed text-zinc-300">
             Minha jornada profissional é marcada pela <span className="text-orange-400 font-medium">
-            determinação</span>, <span className="text-pink-400 font-medium">adaptabilidade</span> Minha jornada profissional é marcada pela determinação, adaptabilidade e uma paixão genuína por transformar ideias em soluções tecnológicas reais.
+            determinação</span>, <span className="text-pink-400 font-medium">adaptabilidade</span> e uma paixão genuína por transformar ideias em soluções tecnológicas reais.
           </p>
         </motion.div>
 
-    
-
-        {/* Skills em grid responsivo */}
-        <motion.div
-          variants={staggerChild}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
-        >
-          {/* Stack Principal */}
-          <div className="group  bg-gradient-to-br from-orange-500/10 to-pink-500/10 backdrop-blur-sm rounded-lg p-4 border border-orange-400/20 hover:border-orange-400/40 transition-all duration-300 hover:shadow-md hover:shadow-orange-400/10">
+        {/* Cards em grid */}
+        <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+          {/* Card 1 */}
+          <div className="group bg-gradient-to-br from-orange-500/10 to-pink-500/10 backdrop-blur-sm rounded-lg p-4 border border-orange-400/20 hover:border-orange-400/40 transition-all duration-300 hover:shadow-md hover:shadow-orange-400/10">
             <div className="space-y-3">
-              <h3 className="text-orange-400  font-bold text-base uppercase tracking-wide flex items-center gap-2">
+              <h3 className="text-orange-400 font-bold text-base uppercase tracking-wide flex items-center gap-2">
                 <span className="text-xl">⚡</span> 
                 <span className="bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent">
                   Stack Principal
@@ -101,7 +91,7 @@ export default function IntroContent() {
             </div>
           </div>
 
-          {/* Especializações */}
+          {/* Card 2 */}
           <div className="group bg-gradient-to-br from-pink-500/10 to-purple-500/10 backdrop-blur-sm rounded-lg p-4 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300 hover:shadow-md hover:shadow-pink-400/10">
             <div className="space-y-3">
               <h3 className="text-pink-400 font-bold text-base uppercase tracking-wide flex items-center gap-2">
@@ -120,12 +110,8 @@ export default function IntroContent() {
           </div>
         </motion.div>
 
-        {/* Call to action sutil */}
-        <motion.div
-          variants={staggerChild}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center pt-2"
-        >
+        {/* CTA */}
+        <motion.div variants={fadeInUp} className="text-center pt-6">
           <p className="text-zinc-400 text-sm">
             Transformando conceitos em código, 
             <span className="text-gradient bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent font-medium">
@@ -134,6 +120,6 @@ export default function IntroContent() {
           </p>
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
