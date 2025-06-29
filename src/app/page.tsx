@@ -78,7 +78,7 @@ export default function Home() {
 
         <section
           id="projects"
-          className="min-h-screen flex items-center justify-center py-20"
+          className="min-h-screen -mt-20 lg:mt-0 flex items-center justify-center py-20"
         >
           <PortfolioCarousel/>
         </section>
