@@ -70,7 +70,7 @@ export default function Home() {
         {/* Timeline */}
         <section
           id="projects"
-          className="bg-zinc-900/30 overflow-x-hidden relative min-h-screen -mt-10 flex items-center justify-center py-20"
+          className="bg-zinc-900/30 overflow-x-hidden relative min-h-screen -mt-20 flex items-center justify-center py-20"
         >
           <AboutMeTimeline />
         </section>

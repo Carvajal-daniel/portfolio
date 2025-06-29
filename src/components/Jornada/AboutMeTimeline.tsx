@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Award, Code, Briefcase, GraduationCap } from 'lucide-react';
 import { Bebas_Neue } from 'next/font/google';
-import AnimatedBgImage from '@/utils/AnimatedBgImage';
 
 
 const bebasNeue = Bebas_Neue({
@@ -199,7 +198,7 @@ export default function AboutMeTimeline() {
 
   return (
     <div>
-      <div className="w-full px-4 lg:-mt-10 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 lg:-mt-10 sm:px-6 -mt-24 lg:px-8 relative z-10">
 
         {/* Timeline Section */}
         <motion.div
