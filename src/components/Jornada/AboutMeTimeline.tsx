@@ -208,7 +208,7 @@ export default function AboutMeTimeline() {
           className="mt-20"
         >
           <div className="text-center mb-12">
-            <h3 className={` ${bebasNeue.className} text-4xl -mt-10 md:mt-0 md:text-5xl xl:text-6xl font-bold bg-gradient-to-r text-white  mb-6`}>
+            <h3 className={` ${bebasNeue.className} text-5xl -mt-10 md:mt-0 md:text-5xl xl:text-6xl font-bold bg-gradient-to-r text-white  mb-6`}>
               Minha Jornada
             </h3>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">

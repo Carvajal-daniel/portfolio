@@ -6,6 +6,7 @@ import HomeSection from "@/components/home/HomeSection";
 import CursorFollower from "@/utils/CursorFollower";
 import AboutMe from "@/components/about/AboutMe";
 import AboutMeTimeline from "@/components/Jornada/AboutMeTimeline";
+import PortfolioCarousel from "@/components/projects/PortfolioCarousel";
 
 
 export default function Home() {
@@ -76,6 +77,13 @@ export default function Home() {
         </section>
 
         <section
+          id="projects"
+          className="min-h-screen flex items-center justify-center py-20"
+        >
+          <PortfolioCarousel/>
+        </section>
+
+          <section
           id="contact"
           className="min-h-screen flex items-center justify-center py-20"
         >

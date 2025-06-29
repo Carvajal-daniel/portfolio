@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import SocialLinks from "./SocialLinks";
 import Link from "next/link";
-import { Bebas_Neue, Poppins } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 import { FiDownload } from "react-icons/fi";
 
 const bebasNeue = Bebas_Neue({
@@ -12,11 +12,7 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-  subsets: ["latin"],
-});
+
 
 const TextIntro = () => {
   const [animationPhase, setAnimationPhase] = useState(0);
